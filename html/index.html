@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бизнес-школа Алтайского Финуниверситета</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__logo">
+                    <a target="_self" href="#" aria-label="Logo">
+                        <img src="../assets/fa-logo.png" alt="Logo" />
+                    </a>
+                </div>
+                <div class="header__slogan">Мы не следуем привычным трендам, <br> мы формируем новые!</div>
+                <div class="header__authentification">
+                    <div class="header__button"><a href="login-form.html">Войти</a></div>
+                    <div class="header__button"><a href="register-form.html">Зарегистрироваться</a></div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="course">
+                <div class="course__header">
+                    <div class="course__image">
+                        <img class="course__logo" src="../assets/course_logo_statistic.png" alt="Логотип курса">
+                    </div>
+                    <div class="course__info">
+                        <h2 class="course__title">Статистика для подростков</h2>
+                        <p class="course__description">Этот курс поможет подросткам понять основы статистики и научиться
+                            применять их в повседневной жизни.</p>
+                    </div>
+                </div>
+                <div class="course__content">
+                    <div class="module">
+                        <h3 class="module__title">Модуль 1: Основы статистики</h3>
+                        <div class="module__lessons">
+                            <div class="lesson">
+                                <h4 class="lesson__title">Урок 1. Такие разные средние</h4>
+                                <div class="lesson__tasks">
+                                    <div class="task" data-task-id="1">1</div>
+                                    <div class="task" data-task-id="2">2</div>
+                                    <div class="task" data-task-id="3">3</div>
+                                    <div class="task" data-task-id="4">4</div>
+                                    <div class="task" data-task-id="5">5</div>
+                                    <div class="task" data-task-id="6">6</div>
+                                    <div class="task" data-task-id="7">7</div>
+                                    <div class="task" data-task-id="8">8</div>
+                                    <div class="task" data-task-id="9">9</div>
+                                    <div class="task" data-task-id="10">10</div>
+                                    <div class="task" data-task-id="11">11</div>
+                                    <div class="task" data-task-id="12">12</div>
+                                    <div class="task" data-task-id="13">13</div>
+                                    <div class="task" data-task-id="14">14</div>
+                                    <div class="task" data-task-id="15">15</div>
+                                    <div class="task" data-task-id="16">16</div>
+                                    <div class="task" data-task-id="17">17</div>
+                                    <div class="task" data-task-id="18">18</div>
+                                </div>
+                            </div>
+                            <!-- Добавьте другие уроки по аналогии -->
+                        </div>
+                    </div>
+                    <!-- Добавьте другие модули по аналогии -->
+                </div>
+                <div id="taskContent" class="task-content" style="display: none;">
+                    <h3 id="taskTitle"></h3>
+                    <div id="taskDescription"></div>
+                    <div id="answerContainer">
+                        <input type="text" id="taskAnswer" placeholder="Ваш ответ">
+                        <div id="multipleChoiceContainer" style="display: none;"></div>
+                    </div>
+                    <button id="submitTask">Отправить</button>
+                    <button id="closeTask">Закрыть задание</button>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+    <script src="../script.js"></script>
+    <script src="../tasks/tasks.js"></script>
+</body>
+
+</html>

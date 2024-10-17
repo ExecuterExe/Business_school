@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - Бизнес-школа Алтайского Финуниверситета</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/forms.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__logo">
+                    <a target="_self" href="index.html" aria-label="Logo">
+                        <img src="../assets/fa-logo.png" alt="Logo" />
+                    </a>
+                </div>
+                <div class="header__slogan">Мы не следуем трендам <br> Создаем свои собственные</div>
+                <div class="header__authentification">
+                    <div class="header__button"><a href="login-form.html">Войти</a></div>
+                    <div class="header__button"><a href="register-form.html">Зарегистрироваться</a></div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="form-container">
+                <form id="register" class="form form--register">
+                    <h2 class="form__title">Регистрация</h2>
+                    <div class="form__field">
+                        <label for="username" class="form__label">Имя пользователя</label>
+                        <input type="text" id="username" name="username" class="form__input" required>
+                    </div>
+                    <div class="form__field">
+                        <label for="email" class="form__label">Email</label>
+                        <input type="email" id="email" name="email" class="form__input" required>
+                    </div>
+                    <div class="form__field">
+                        <label for="password" class="form__label">Пароль</label>
+                        <input type="password" id="password" name="password" class="form__input" required>
+                    </div>
+                    <div class="form__field">
+                        <label for="confirm-password" class="form__label">Подтвердите пароль</label>
+                        <input type="password" id="confirm-password" name="confirm-password" class="form__input"
+                            required>
+                    </div>
+                    <button type="submit" class="form__submit">Зарегистрироваться</button>
+                </form>
+                <div class="login_container"><a href="login-form.html">Уже есть аккаунт? Войдите в него</a></div>
+            </div>
+        </main>
+        <footer class="footer">
+            <!-- Здесь может быть содержимое футера -->
+        </footer>
+    </div>
+</body>
+
+</html>

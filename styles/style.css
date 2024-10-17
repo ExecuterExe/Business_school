@@ -1,0 +1,336 @@
+@import url('nullStyle.css');
+
+:root {
+    --branded-background-color: #006d7a;
+    --header-height: 10vh;
+    --branded-white-color: white;
+    --header-fontsize: 24px;
+    --main-text-color: #333;
+    --secondary-background-color: #f0f0f0;
+    --border-radius: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--main-text-color);
+    line-height: 1.6;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    height: var(--header-height);
+    background-color: var(--branded-background-color);
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header__logo {
+    height: calc(var(--header-height) - 2vh);
+}
+
+.header__logo a {
+    display: block;
+    height: 100%;
+}
+
+.header__logo img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.header__slogan {
+    color: var(--branded-white-color);
+    font-size: var(--header-fontsize);
+    text-align: center;
+    font-weight: 800;
+}
+
+.header__authentification {
+    display: flex;
+    gap: 10px;
+    color: var(--branded-white-color);
+}
+
+.header__button {
+    background-color: transparent;
+    border: 1px solid var(--branded-white-color);
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header__button a {
+    text-decoration: none;
+    color: var(--branded-white-color);
+}
+
+.header__button:hover {
+    background-color: var(--branded-white-color);
+}
+
+.header__button:hover a {
+    color: #000;
+}
+
+.main {
+    flex: 1;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.course {
+    background-color: var(--branded-white-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.course {
+    background-color: var(--branded-white-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.5s ease;
+    max-height: 200px;
+    /* Начальная высота */
+    transition: max-height 0.5s ease-out;
+}
+
+.course.expanded {
+    max-height: 2000px;
+    /* Достаточно большое значение для полного раскрытия */
+}
+
+.course__content {
+    display: none;
+    transition: all 0.5s ease-out;
+}
+
+.course.expanded .course__content {
+    display: block;
+}
+
+.course__header {
+    display: flex;
+    padding: 30px;
+    background-color: var(--secondary-background-color);
+}
+
+.course__image {
+    flex: 0 0 150px;
+    margin-right: 30px;
+}
+
+.course__logo {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+.course__info {
+    flex: 1;
+    cursor: pointer;
+}
+
+.course__title {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: var(--branded-background-color);
+}
+
+.course__description {
+    font-size: 16px;
+    color: #666;
+}
+
+.course__content {
+    padding: 20px;
+}
+
+.module {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.module__title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--branded-background-color);
+    cursor: pointer;
+}
+
+.module__lessons {
+    display: none;
+}
+
+
+.lesson {
+    margin-bottom: 15px;
+}
+
+.lesson__title {
+    margin-bottom: 10px;
+}
+
+.lesson__tasks {
+    display: flex;
+    gap: 10px;
+}
+
+.task {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--branded-background-color);
+    color: var(--branded-white-color);
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.task:hover {
+    transform: scale(1.1);
+}
+
+/* Добавим стили для активных состояний */
+.course.active {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.module.active {
+    background-color: #f0f0f0;
+}
+
+.lesson.active {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-content {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#taskDescription {
+    min-height: 100px;
+    margin-bottom: 15px;
+}
+
+#taskAnswer {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+#submitTask {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--branded-background-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task {
+    cursor: pointer;
+}
+
+.task.completed {
+    background-color: #4CAF50;
+}
+
+.task.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#taskTitle {
+    margin-bottom: 10px;
+}
+
+#taskDescription {
+    margin-bottom: 15px;
+}
+
+#taskAnswer {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#submitTask {
+    background-color: var(--branded-background-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submitTask:hover {
+    background-color: darken(var(--branded-background-color), 10%);
+}
+
+.task-content {
+    display: none;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-content.active {
+    display: block;
+}
+
+
+#multipleChoiceContainer {
+    margin-top: 10px;
+}
+
+.choice-option {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#closeTask {
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#closeTask:hover {
+    background-color: #e0e0e0;
+}
